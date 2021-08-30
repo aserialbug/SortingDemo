@@ -44,6 +44,10 @@ namespace sort
             Stopwatch stopwatch = Stopwatch.StartNew();
             try
             {
+                // Объекты создаются без IoC и внедрения зависимостей
+                // т.к. проект очень маленький. Из-за этого получилось не правильное 
+                // направление зависимостей: объекты Application зависят от объектов
+                // в Infrastructure. 
                 var transformer = new LineTransformer();
                 var splitter = new FileSplitter(transformer, options);
                 var merger = new FileMerger(transformer, options);

@@ -40,7 +40,10 @@ namespace generate
             var stopwatch = Stopwatch.StartNew();
             try
             {
-                // Объекты создаются 
+                // Объекты создаются без IoC и внедрения зависимостей
+                // т.к. проект очень маленький. Из-за этого получилось не правильное 
+                // направление зависимостей: объекты Application зависят от объектов
+                // в Infrastructure. 
                 var wordSource = new WordSource();
                 using var output = new OutputContainer(outputFileName);
                 var lineBuilder = new LineBuilder(wordSource, options);

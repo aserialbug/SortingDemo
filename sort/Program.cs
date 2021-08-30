@@ -1,12 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace sort
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
+    
 }

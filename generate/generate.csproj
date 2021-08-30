@@ -5,4 +5,9 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Remove="Resources\english3.txt" />
+      <EmbeddedResource Include="Resources\english3.txt" />
+    </ItemGroup>
+
 </Project>

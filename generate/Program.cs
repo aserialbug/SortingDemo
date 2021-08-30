@@ -40,6 +40,7 @@ namespace generate
             var stopwatch = Stopwatch.StartNew();
             try
             {
+                // Объекты создаются 
                 var wordSource = new WordSource();
                 using var output = new OutputContainer(outputFileName);
                 var lineBuilder = new LineBuilder(wordSource, options);
